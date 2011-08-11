@@ -12,6 +12,7 @@ public class AuthorizationTest extends MyTestBase {
 		app.getNavHelper().goToAuthPage();
 		app.getLoginHelper().login(login, password);
 		Assert.assertTrue(app.getNavHelper().returnCurrentPageAdress().contains(login));
+		Assert.assertTrue(app.getAssertHelper().isTextPresent(login, "//div[@class='user-info']/dl/dt"));
 	}
 
 }
