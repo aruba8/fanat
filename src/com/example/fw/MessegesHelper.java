@@ -1,7 +1,6 @@
 package com.example.fw;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.internal.selenesedriver.FindElement;
 
 public class MessegesHelper extends HelperBase {
 
