@@ -16,9 +16,12 @@ public class SendMessages extends MyTestBase{
 		Assert.assertTrue(app.getNavHelper().returnCurrentPageAdress().contains(login));
 		app.getNavHelper().goToPage("http://fanat.ru/messages/inbox");
 		Assert.assertTrue(app.getAssertHelper().isTextPresent(login, "//div[@class='fanat-strip-profile canyon-section']"));
+		int count_before = app.getMessegesHelper().getCountOfSentedMessages();
 		app.getMessegesHelper().sendMessage(login_to, subj, message);
-		Assert.assertTrue(app.getAssertHelper().isTextPresent("Сообщение отправлено пользователю", "//div[@class='l-container']//div[@class='b-messages-title-container b-message-status']/p"));
-		Assert.assertTrue(app.getAssertHelper().isTextPresent(login_to, "//div[@class='b-messages-title-container b-message-status']//strong"));
+		Assert.assertTrue(app.getAssertHelper().isTextPresent("Сообщение отправлено пользователю"+" "+login_to+".", "//div[@class='l-container']//div[@class='b-messages-title-container b-message-status']/p"));
+		int count_after = app.getMessegesHelper().getCountOfSentedMessages();
+		Assert.assertEquals(1, count_after-count_before);
+		
 		
 	}
 

@@ -12,5 +12,9 @@ public class AssertHelper extends HelperBase {
 			return true;
 		}else return false;
 	}
+	
+	public void showTextByLocator(String locator){
+		System.out.println(findElement(locator).getText());
+	}
 
 }

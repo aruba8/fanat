@@ -17,4 +17,12 @@ public class MessegesHelper extends HelperBase {
 		String vermessage =	driver.findElement(By.xpath("//div[@class='b-messages-title-container b-message-status']")).getText();
 
 	}
+
+	public int getCountOfSentedMessages() {
+		String locator = "//div[@class='l-container']//ul[@class='b-messages-folders']/li[2]/p[@class='count']";
+		String str = driver.findElement(By.xpath(locator)).getText();
+		str = str.substring(9);
+		int count = Integer.parseInt(str);
+		return count;
+	}
 }
