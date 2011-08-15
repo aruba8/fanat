@@ -14,8 +14,6 @@ public class MessegesHelper extends HelperBase {
 		driver.findElement(By.xpath("//input[@id='subject']")).sendKeys(subj);
 		driver.findElement(By.xpath("//textarea[@id='text']")).sendKeys(message);
 		driver.findElement(By.xpath("//input[@name='save']")).click();
-		String vermessage =	driver.findElement(By.xpath("//div[@class='b-messages-title-container b-message-status']")).getText();
-
 	}
 
 	public int getCountOfSentedMessages() {
