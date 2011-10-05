@@ -7,7 +7,7 @@ public class TestClass extends MyTestBase {
 	@Test
 	public void testSomthing(){
 		String login = "biomaks";
-		String password = "Asd123456";
+		String password = "";
 		app.getNavHelper().goToAuthPage();
 		app.getLoginHelper().login(login, password);
 		Assert.assertTrue(app.getNavHelper().returnCurrentPageAdress().contains(login));
