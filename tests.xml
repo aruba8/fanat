@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="General">
+  <test name="Authorization">
+    <classes>
+      <class name="com.example.tests.AuthorizationTest"/>
+    </classes>
+  </test>
+  <test name="SendMessages">
+    <classes>
+      <class name="com.example.tests.SendMessages"/>
+    </classes>
+  </test>
+</suite>

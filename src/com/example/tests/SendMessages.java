@@ -10,7 +10,7 @@ public class SendMessages extends MyTestBase{
 		String subj = "test subj";
 		String message = "test message";
 		String login = "biomaks";
-		String password = "";
+		String password = "123456";
 		app.getNavHelper().goToAuthPage();
 		app.getLoginHelper().login(login, password);
 		Assert.assertTrue(app.getNavHelper().returnCurrentPageAdress().contains(login));
