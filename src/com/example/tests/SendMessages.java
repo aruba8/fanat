@@ -6,11 +6,11 @@ import org.testng.annotations.Test;
 public class SendMessages extends MyTestBase{
 	@Test
 	public void testSendMessages(){
-		String login_to = "erikstb";
+		String login_to = "biomaks";
 		String subj = "test subj";
 		String message = "test message";
-		String login = "biomaks";
-		String password = "123456";
+		String login = "erikstb";
+		String password = "Asd123456";
 		app.getNavHelper().goToAuthPage();
 		app.getLoginHelper().login(login, password);
 		Assert.assertTrue(app.getNavHelper().returnCurrentPageAdress().contains(login));
